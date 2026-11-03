@@ -1,0 +1,95 @@
+name: "📋 Development Task"
+description: "Plan a development task with a clear goal, scope, and completion checks."
+title: "[Task] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📋 Plan a development task
+
+        Use this form to describe work for a contributor or coding assistant.
+        **Goal** and **Completion criteria** are required; everything else is optional.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: "🎯 Goal"
+      description: "What needs to change, and why? Describe the result you want."
+      placeholder: "Example: Move repeated settings checks into one shared function so they are easier to maintain."
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: "✅ Completion criteria"
+      description: "List observable results that would show the task is finished. Markdown checklists work here."
+      placeholder: |
+        Example:
+        - [ ] Existing settings behavior is preserved.
+        - [ ] Each settings screen uses the shared validation function.
+        - [ ] Valid and invalid settings are checked.
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### 🛠️ Optional planning details
+        Include the information needed to keep the task focused.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "🧩 Type of work"
+      options:
+        - "Implementation"
+        - "Refactoring"
+        - "Testing"
+        - "Maintenance or dependencies"
+        - "Investigation"
+        - "Other / Not sure"
+    validations:
+      required: false
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: "📐 Scope and constraints"
+      description: "What is included, what is outside this task, and what behavior must be preserved?"
+      placeholder: "Example: Update settings validation only. Keep existing error messages and saved-file formats."
+    validations:
+      required: false
+
+  - type: textarea
+    id: approach
+    attributes:
+      label: "📝 Suggested approach"
+      description: "Add implementation notes or a checklist if you have one. Leave open decisions clear."
+      placeholder: "Example: Review the current checks, extract the common rules, then update their callers."
+    validations:
+      required: false
+
+  - type: textarea
+    id: verification
+    attributes:
+      label: "🧪 How should this be checked?"
+      description: "Describe relevant tests, manual checks, or evidence needed to confirm the result."
+      placeholder: "Example: Try valid and invalid values on each settings screen, then save and reopen the settings."
+    validations:
+      required: false
+
+  - type: textarea
+    id: dependencies
+    attributes:
+      label: "🔗 Dependencies and references"
+      description: "Link related issues, files, or decisions. You can also drag and drop or paste attachments here."
+      placeholder: "Example: Related issue #12; relevant file: src/settings/validation.ts"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "💙 A clear goal and completion criteria make the work easier to pick up and review."

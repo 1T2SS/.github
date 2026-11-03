@@ -1,6 +1,5 @@
-
 name: "💡 Feature Request"
-description: "Have an idea? Suggest it here!"
+description: "Suggest a new feature or a change to an existing one."
 title: "[Feature] "
 labels: ["enhancement"]
 
@@ -10,56 +9,40 @@ body:
       value: |
         ## 💡 Got an idea?
 
-        I'd love to hear it! ❤️
-
-        Whether it's a small improvement or a
-        completely new feature, feel free to suggest it.
-
-        > 💡 You don't need to explain how to build it.
-        > Just tell me what you'd like to see!
-
-        ---
-
-        ### ✨ Tell me about your idea
+        Small improvements and new ideas are welcome!
+        You don't need to explain how to build it. Only **What would you like to add or change?** is required.
 
   - type: textarea
     id: idea
     attributes:
       label: "💡 What would you like to add or change?"
-      description: "Explain your idea in your own words."
-      placeholder: |
-        Example: It would be nice if residents
-        could have different jobs.
-
-        All ideas are welcome!
+      description: "Describe your idea in your own words."
+      placeholder: "Example: I'd like an option to make text larger."
     validations:
       required: true
-
-  - type: textarea
-    id: benefit
-    attributes:
-      label: "❤️ Why would this be useful?"
-      description: "What would this improve or make easier?"
-      placeholder: |
-        Example: It would make towns feel more
-        alive and interesting.
-    validations:
-      required: false
 
   - type: markdown
     attributes:
       value: |
         ---
+        ### 🎨 Optional details
+        Add whatever helps explain your idea.
 
-        ### 🎨 Extra details
-        Everything below is **optional**.
+  - type: textarea
+    id: benefit
+    attributes:
+      label: "❤️ Why would this be useful?"
+      description: "What problem would this solve, and who would it help?"
+      placeholder: "Example: Larger text would make the interface easier to read on a small screen."
+    validations:
+      required: false
 
   - type: dropdown
     id: category
     attributes:
       label: "🧩 What kind of idea is this?"
       options:
-        - "Something completely new"
+        - "Something new"
         - "Improve an existing feature"
         - "Make something easier to use"
         - "More customization or options"
@@ -70,29 +53,39 @@ body:
   - type: textarea
     id: example
     attributes:
-      label: "🎮 How do you imagine it working?"
-      description: "If you have an example, share it!"
-      placeholder: |
-        Example: When registering a house,
-        I could select which jobs the residents have.
+      label: "✨ How do you imagine it working?"
+      description: "Describe an example of using it or what a useful result would look like."
+      placeholder: "Example: A text-size setting could offer small, medium, and large options."
     validations:
       required: false
 
-  - type: upload
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: "🔀 Have you tried another approach?"
+      description: "Share any workaround or alternative you've considered."
+      placeholder: "Example: Zooming in helps, but some controls no longer fit on the screen."
+    validations:
+      required: false
+
+  - type: textarea
     id: references
     attributes:
       label: "📸 Pictures or examples"
-      description: "Have a screenshot, drawing or other example? Add it here!"
+      description: "Drag and drop or paste images and files here, use the attachment button, or add a link."
+      placeholder: "A sketch, screenshot, or example from another project can help."
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "💬 Anything else?"
+      description: "Add any other thoughts or useful context."
+      placeholder: "Feel free to share anything else about your idea."
     validations:
       required: false
 
   - type: markdown
     attributes:
-      value: |
-        ---
-
-        ### 💙 Thanks for sharing!
-
-        Every suggestion is appreciated.
-        Not every idea will be implemented,
-        but they're all useful to consider!
+      value: "💙 Thanks for sharing! Every suggestion helps us understand what people need."

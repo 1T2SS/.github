@@ -1,0 +1,81 @@
+name: "❓ Question / Help"
+description: "Ask a question or get help using the project."
+title: "[Question] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## ❓ Need a hand?
+
+        Ask in your own words. You don't need to know the technical terms.
+        Only **What would you like help with?** is required.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: "❓ What would you like help with?"
+      description: "Tell us your question and what you're trying to do."
+      placeholder: "Example: How can I change where my files are saved?"
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### 🔎 Optional details
+        A little context can make it easier to help.
+
+  - type: dropdown
+    id: topic
+    attributes:
+      label: "🧭 What is your question about?"
+      options:
+        - "Getting started or installation"
+        - "Using a feature"
+        - "Settings or configuration"
+        - "Understanding how something works"
+        - "Other / Not sure"
+    validations:
+      required: false
+
+  - type: textarea
+    id: tried
+    attributes:
+      label: "🛠️ What have you tried?"
+      description: "Share any steps, instructions, or searches you've already tried."
+      placeholder: "Example: I checked the settings and the getting-started guide, but couldn't find the option."
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: "🔖 Version"
+      description: "The project version or release, if you know it."
+      placeholder: "Example: 1.2.0"
+    validations:
+      required: false
+
+  - type: input
+    id: environment
+    attributes:
+      label: "💻 Your setup"
+      description: "Include your device, operating system, or browser if relevant."
+      placeholder: "Example: Windows 11, Firefox"
+    validations:
+      required: false
+
+  - type: textarea
+    id: context
+    attributes:
+      label: "📎 Screenshots or extra context"
+      description: "Drag and drop or paste files here, use the attachment button, or add links and details. Remove private information first."
+      placeholder: "A screenshot of where you're stuck can help."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "💙 Thanks for asking! Your question may help improve the instructions for everyone."

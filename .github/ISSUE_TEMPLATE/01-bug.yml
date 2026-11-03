@@ -1,6 +1,5 @@
-
 name: "🐛 Bug Report"
-description: "Found something broken? Report it here!"
+description: "Found something broken? Tell us what happened."
 title: "[Bug] "
 labels: ["bug"]
 
@@ -10,40 +9,35 @@ body:
       value: |
         ## 🐛 Something not working?
 
-        Thanks for helping make this project better! ❤️
-
-        You don't need to know anything technical.
-        Just tell me what happened in your own words.
-
-        > 💡 Only the questions marked with * are required.
-        > Don't worry if you don't know all the answers!
-
-        ---
-
-        ### 📝 Tell me about the problem
+        Thanks for helping improve this project! You don't need technical knowledge.
+        Describe the problem in your own words. Only **What went wrong?** is required.
 
   - type: textarea
     id: problem
     attributes:
       label: "😕 What went wrong?"
-      description: "Explain what broke or didn't work."
-      placeholder: |
-        Example: I placed a house, but no residents moved in.
-
-        Just describe the problem as best you can!
+      description: "Tell us what happened, including any error message you saw."
+      placeholder: "Example: I clicked Save, but my changes disappeared when I reopened the page."
     validations:
       required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### 🔎 Optional details
+        Share whatever you know. It's fine to leave the rest blank.
 
   - type: textarea
     id: activity
     attributes:
-      label: "🎮 What were you doing?"
-      description: "What were you doing when the problem happened?"
+      label: "📝 What were you doing?"
+      description: "A few steps can help someone reproduce the problem. A rough explanation is fine."
       placeholder: |
-        Example: I was building a new house and
-        tried to register it.
-
-        A rough explanation is completely fine!
+        Example:
+        1. Open the settings.
+        2. Change an option and click Save.
+        3. Reopen the settings.
     validations:
       required: false
 
@@ -51,54 +45,59 @@ body:
     id: expected
     attributes:
       label: "✅ What did you expect to happen?"
-      description: "Optional — what should have happened instead?"
-      placeholder: "Example: Residents should move into the house."
+      description: "What should have happened instead?"
+      placeholder: "Example: I expected the saved option to stay selected."
     validations:
       required: false
-
-  - type: markdown
-    attributes:
-      value: |
-        ---
-
-        ### 🔎 A few extra details
-        Everything below is **optional**.
 
   - type: dropdown
     id: frequency
     attributes:
       label: "🔄 How often does it happen?"
       options:
-        - "I don't know"
         - "Only happened once"
         - "Sometimes"
         - "Every time"
+        - "Not sure"
     validations:
       required: false
 
   - type: input
     id: version
     attributes:
-      label: "🔖 Game / App version"
-      description: "If you know it, great! Otherwise leave this blank."
+      label: "🔖 Version"
+      description: "The project version or release, if you know it."
       placeholder: "Example: 1.2.0"
     validations:
       required: false
 
-  - type: upload
+  - type: input
+    id: environment
+    attributes:
+      label: "💻 Where did this happen?"
+      description: "Your device, operating system, browser, or other relevant setup."
+      placeholder: "Example: Windows 11, Firefox"
+    validations:
+      required: false
+
+  - type: textarea
     id: evidence
     attributes:
-      label: "📸 Screenshots, videos or logs"
-      description: "A picture or video can help show the problem!"
+      label: "📸 Screenshots, videos, or logs"
+      description: "Drag and drop or paste files here, use the attachment button, or add a link. Remove private information from logs first."
+      placeholder: "Add anything that helps show the problem."
+    validations:
+      required: false
+
+  - type: textarea
+    id: extra
+    attributes:
+      label: "💬 Anything else?"
+      description: "Share a workaround, related issue, or anything else that might help."
+      placeholder: "Example: Restarting fixes it until I change the option again."
     validations:
       required: false
 
   - type: markdown
     attributes:
-      value: |
-        ---
-
-        ### 💙 Thank you!
-
-        Your report helps improve the project.
-        Even small bug reports are useful!
+      value: "💙 Thank you! Even a short report can help us find and fix a problem."

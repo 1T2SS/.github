@@ -1,0 +1,82 @@
+name: "📖 Documentation"
+description: "Report missing, unclear, or outdated instructions and plan documentation updates."
+title: "[Docs] "
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 📖 Help make the instructions clearer
+
+        Report confusing information or suggest documentation that's missing.
+        You don't need to write the replacement. Only **What needs to be documented or improved?** is required.
+
+  - type: textarea
+    id: need
+    attributes:
+      label: "📝 What needs to be documented or improved?"
+      description: "Describe what's missing, incorrect, outdated, or hard to understand."
+      placeholder: "Example: The getting-started guide doesn't explain how to change the default save location."
+    validations:
+      required: true
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+        ### 🔎 Optional details
+        Share what would help a reader understand or complete the task.
+
+  - type: dropdown
+    id: category
+    attributes:
+      label: "🧩 What kind of documentation change is needed?"
+      options:
+        - "Missing instructions"
+        - "Incorrect or outdated information"
+        - "Unclear wording or explanation"
+        - "More examples"
+        - "Broken link or typo"
+        - "Other / Not sure"
+    validations:
+      required: false
+
+  - type: input
+    id: location
+    attributes:
+      label: "🔗 Where should we look?"
+      description: "Add a page link, file path, or section name. Leave blank if the documentation doesn't exist yet."
+      placeholder: "Example: README.md, Getting started section"
+    validations:
+      required: false
+
+  - type: textarea
+    id: audience
+    attributes:
+      label: "👥 Who is this for, and what are they trying to do?"
+      description: "Describe the reader and the task or question the documentation should address."
+      placeholder: "Example: A new user trying to choose a different folder before saving their first file."
+    validations:
+      required: false
+
+  - type: textarea
+    id: suggestion
+    attributes:
+      label: "💡 Suggested content or result"
+      description: "Share wording, an outline, or what a reader should be able to do after the update."
+      placeholder: "Example: Add steps for choosing a folder and explain how to confirm the new location is in use."
+    validations:
+      required: false
+
+  - type: textarea
+    id: references
+    attributes:
+      label: "📎 Examples or supporting details"
+      description: "Drag and drop or paste screenshots and files here, use the attachment button, or add links and details."
+      placeholder: "Add a screenshot of the confusing section or a link to a useful example."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: "💙 Thanks for helping! Clear instructions make the project easier for everyone to use."
