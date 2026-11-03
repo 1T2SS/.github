@@ -1,0 +1,104 @@
+
+name: "🐛 Bug Report"
+description: "Found something broken? Report it here!"
+title: "[Bug] "
+labels: ["bug"]
+
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## 🐛 Something not working?
+
+        Thanks for helping make this project better! ❤️
+
+        You don't need to know anything technical.
+        Just tell me what happened in your own words.
+
+        > 💡 Only the questions marked with * are required.
+        > Don't worry if you don't know all the answers!
+
+        ---
+
+        ### 📝 Tell me about the problem
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: "😕 What went wrong?"
+      description: "Explain what broke or didn't work."
+      placeholder: |
+        Example: I placed a house, but no residents moved in.
+
+        Just describe the problem as best you can!
+    validations:
+      required: true
+
+  - type: textarea
+    id: activity
+    attributes:
+      label: "🎮 What were you doing?"
+      description: "What were you doing when the problem happened?"
+      placeholder: |
+        Example: I was building a new house and
+        tried to register it.
+
+        A rough explanation is completely fine!
+    validations:
+      required: false
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "✅ What did you expect to happen?"
+      description: "Optional — what should have happened instead?"
+      placeholder: "Example: Residents should move into the house."
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        ### 🔎 A few extra details
+        Everything below is **optional**.
+
+  - type: dropdown
+    id: frequency
+    attributes:
+      label: "🔄 How often does it happen?"
+      options:
+        - "I don't know"
+        - "Only happened once"
+        - "Sometimes"
+        - "Every time"
+    validations:
+      required: false
+
+  - type: input
+    id: version
+    attributes:
+      label: "🔖 Game / App version"
+      description: "If you know it, great! Otherwise leave this blank."
+      placeholder: "Example: 1.2.0"
+    validations:
+      required: false
+
+  - type: upload
+    id: evidence
+    attributes:
+      label: "📸 Screenshots, videos or logs"
+      description: "A picture or video can help show the problem!"
+    validations:
+      required: false
+
+  - type: markdown
+    attributes:
+      value: |
+        ---
+
+        ### 💙 Thank you!
+
+        Your report helps improve the project.
+        Even small bug reports are useful!
